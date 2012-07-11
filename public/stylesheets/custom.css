@@ -23,6 +23,10 @@ section {
 	background: white;
 }
 
+h1 {
+	font-size: 2em;
+}
+
 a {
 	color: #09c;
 	text-decoration: none;
