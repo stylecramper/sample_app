@@ -1,4 +1,5 @@
 module ApplicationHelper
+  # ApplicationHelper gets included in controller classes automatically
   
   # Return a title on a per-page basis
   def title
