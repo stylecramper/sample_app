@@ -10,6 +10,16 @@ class UsersController < ApplicationController
     @user = User.new
   end
   
-  
+  def create
+    # raise params[:user].inspect # create a runtime error to inspect the user params
+    @user = User.new(params[:user])
+    if @user.save
+      # handle the save
+      redirect_to @user, :flash => { :success => 'Welcome to the Sample App!' } 
+    else
+      @title = 'Sign up'
+      render 'new'
+    end
+  end
 
 end
