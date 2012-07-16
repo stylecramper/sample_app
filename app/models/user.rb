@@ -29,6 +29,11 @@ class User < ActiveRecord::Base
     return user if user.has_password?(submitted_password)
   end
   
+  def self.authenticate_with_salt(id, cookie_salt)
+    user = find_by_id(id)
+    (user && user.salt == cookie_salt) ? user : nil
+  end
+  
   private
   
     def encrypt_password
@@ -49,6 +54,7 @@ class User < ActiveRecord::Base
     end
   
 end
+
 # == Schema Information
 #
 # Table name: users
@@ -59,5 +65,6 @@ end
 #  created_at         :datetime
 #  updated_at         :datetime
 #  encrypted_password :string(255)
+#  salt               :string(255)
 #
 
