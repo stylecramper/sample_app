@@ -163,3 +163,8 @@ div.field, div.action {
 	font-size: 12px;
 	list-style:square;
 }
+
+ul.users {
+	margin-top: 1em;
+	list-style-type: none;
+}
