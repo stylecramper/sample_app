@@ -17,14 +17,19 @@ module SessionsHelper
     !current_user.nil?
   end
   
+  def sign_out
+    cookies.delete(:remember_token)
+    current_user = nil
+  end
+  
   private
   
-  def user_from_remember_token
-    User.authenticate_with_salt(*remember_token)
-  end
+    def user_from_remember_token
+      User.authenticate_with_salt(*remember_token)
+    end
   
-  def remember_token
-    cookies.signed[:remember_token] || [nil, nil]
-  end
+    def remember_token
+      cookies.signed[:remember_token] || [nil, nil]
+    end
   
 end
