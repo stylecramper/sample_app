@@ -181,14 +181,17 @@ table.microposts tr {
 	height: 70px;
 }
 
-table.microposts tr td.gravatar {
+table.microposts td {
 	border-top: solid 1px #ccc;
+}
+
+table.microposts tr td.gravatar {
+	/*border-top: solid 1px #ccc;*/
 	vertical-align: top;
 	width: 50px;
 }
 
 table.microposts tr td.micropost {
-	border-top: solid 1px #ccc;
 	vertical-align: top;
 	padding-top: 10px;
 }
@@ -209,6 +212,7 @@ div.user_info a {
 
 div.user_info span.user_name {
 	position: absolute;
+	font-size: 1.2em;
 }
 
 div.user_info span.microposts {
@@ -222,4 +226,62 @@ form.new_micropost {
 form.new_micropost textarea {
 	height: 4em;
 	margin-bottom: 0;
+}
+
+.stats {
+	overflow: auto;
+	margin-top: 20px;
+}
+
+.stats a {
+	float: left;
+	padding: 0 10px;
+	border-left: solid 1px #ccc;
+	color: gray;
+}
+
+.stats a:first-child {
+	padding-left: 0;
+	border: 0;
+}
+
+.stats a:hover {
+	text-decoration: none;
+	color: blue;
+}
+
+.stats strong {
+	display: block;
+}
+
+.user_avatars {
+	overflow: auto;
+	margin-top: 10px;
+}
+
+.user_avatars .gravatar {
+	margin: 1px;
+}
+
+.btn-large {
+	padding: 5px 15px;
+	font-size: 1.2em;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+	border-style: none;
+}
+
+.btn-primary {
+	background-color: #9ebefd;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(158, 190, 253)), to(rgb(16, 63, 252)));
+	background-image: -webkit-linear-gradient(top, rgb(158, 190, 253), rgb(16, 63, 252));
+	background-image: -moz-linear-gradient(top, rgb(158, 190, 253), rgb(16, 63, 252));
+	background-image: -o-linear-gradient(top, rgb(158, 190, 253), rgb(16, 63, 252));
+	background-image: -ms-linear-gradient(top, rgb(158, 190, 253), rgb(16, 63, 252));
+	background-image: linear-gradient(top, rgb(158, 190, 253), rgb(16, 63, 252));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#9ebefd', EndColorStr='#103ffc');
+	background-color: navy;
+	color: white;
 }
